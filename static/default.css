@@ -1,0 +1,49 @@
+/*Home Page Html*/
+.navbar-default
+{
+  background-color:#114D85!important;
+}
+.text-default
+{
+    font-size: 20px;
+    font-family: serif;
+    font-weight: normal!important;
+    letter-spacing: 2px;
+}
+.text-header
+{
+    font-size: 22px;
+    font-family: serif;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.text-user
+{
+    font-size: 17px;
+    font-family: serif;
+    font-weight: normal!important;
+    letter-spacing: 2px;
+}
+
+.defaut-dropdown
+{
+  background-color: #fbfbff;
+}
+
+.defaut-dropdown a
+{
+    color: #114d85;
+    font-weight: inherit;
+    font-family: serif;
+    font-size: 18px;
+}
+
+.text-welcome
+{
+    font-size: 24px;
+    font-family: serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #114d85!important;
+}

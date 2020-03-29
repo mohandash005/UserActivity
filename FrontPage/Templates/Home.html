@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'default.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar d-flex rounded sticky-top navbar-default border border-light p-sm-1">
+          <a class="navbar-brand text-white text-header"><i class="far fa-user fa-2x"></i> User</a>
+          <!--<div class="ml-md-5">
+              <input class="form-control ml-md-5" type="search" placeholder="Search" aria-label="Search" style="background-color: #fbfbff;">
+          </div>-->
+          <div class="nav-item dropdown mr-4 ml-auto p-2">
+              <a class="nav-link dropdown-toggle text-white text-user" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="text-white mx-lg-2" style="font-size: 21px;"><i class="fas fa-comment"></i></span>
+                  <span class="text-white mx-lg-2" style="font-size: 21px;"><i class="fas fa-bell"></i></span>
+                  <span class="text-white mx-lg-1" style="font-size: 21px;"><i class="fas fa-user-circle"></i></span>
+                  {{ name }}
+              </a>
+              <div class="dropdown-menu mr-4 dropdown-menu-right defaut-dropdown" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="Logout">Logout</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="signup">Account and settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">About Learning</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Help</a>
+              </div>
+          </div>
+    </nav>
+    <div class="mt-5">
+        <h3 class="text-welcome text-center">Welcome to UserActivity</h3>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

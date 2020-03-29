@@ -1,0 +1,35 @@
+{% extends 'Base.html' %}
+{% block content %}
+{% load static %}
+<div class="container-fluid h-100 w-100">
+    <div class="row justify-content-center px-sm-4 px-md-0">
+        <div class="col-sm-8 col-md-4 p-5">
+            <h4 class="text-center" style="color: #dee0e8!important;font-weight: normal;font-family: initial;letter-spacing: 3.5px;"><i class="fa fa-user fa-2x" aria-hidden="true"></i> Register</h4>
+            {% for message in messages  %}
+               <h6 class="text-white">{{ message }}</h6>
+            {% endfor %}
+            <form class="my-3" method="post" action="Sign">
+              {% csrf_token %}
+              <div class="form-group py-sm-2">
+                <label for="Name" class="font-weight-bold" style="font-size: 20px;font-family: serif;letter-spacing: 1px;color: #dee0e8;">Name</label>
+                <input type="text" class="form-control text-light" id="Name" aria-describedby="NameHelp" placeholder="Full Name" name="Name" style="border-bottom: 2px solid #dee0e8!important;border: none;background-color: transparent;border-radius: unset;">
+              </div>
+              <div class="form-group">
+                <label for="Email" class="font-weight-bold" style="font-size: 20px;font-family: serif;letter-spacing: 1px;color: #dee0e8;">Email address</label>
+                <input type="email" class="form-control text-light" id="Email" aria-describedby="emailHelp" placeholder="Enter email" name="Email" style="border-bottom: 2px solid #dee0e8!important;border: none;background-color: transparent;border-radius: unset;">
+              </div>
+              <div class="form-group">
+                <label for="CreatePassword" class="font-weight-bold" style="font-size: 20px;font-family: serif;letter-spacing: 1px;color: #dee0e8;">Create Password</label>
+                <input type="password" class="form-control text-light" id="CreatePassword" placeholder="Create Password" name="CreatePassword" style="border-bottom: 2px solid #dee0e8!important;border: none;background-color: transparent;border-radius: unset;">
+              </div>
+              <div class="form-group">
+                <label for="ConfirmPassword" class="font-weight-bold" style="font-size: 20px;font-family: serif;letter-spacing: 1px;color: #dee0e8;">Confirm Password</label>
+                <input type="password" class="form-control text-light" id="ConfirmPassword" placeholder="Confirm Password" name="ConfirmPassword" style="border-bottom: 2px solid #dee0e8!important;border: none;background-color: transparent;border-radius: unset;">
+              </div>
+              <button type="submit" class="btn btn-light btn-block my-2" style="color: #114d85;font-weight: bold;font-size: 18px;letter-spacing: 2px;"><i class="fa fa-user-plus fa-1x" aria-hidden="true"></i> Signup</button>
+            </form>
+            <a type="submit" onclick="ipLookUp()" class="btn btn-light btn-block my-2" href="Login" style="color: #114d85;font-weight: bold;font-size: 18px;letter-spacing: 2px;"><i class="fa fa-user-plus fa-1x" aria-hidden="true"></i> Login</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
