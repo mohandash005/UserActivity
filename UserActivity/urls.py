@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url('',include('FrontPage.urls')),
+    url(r'^api/users/',include('FrontPage.api.urls', namespace='post-api'))
 ]

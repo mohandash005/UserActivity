@@ -12,3 +12,6 @@ class User_Activity(models.Model):
     location=models.CharField(max_length=140)
     start_time=models.DateTimeField()
     end_time=models.DateTimeField()
+
+    class Meta:
+        ordering = ['FullName']
