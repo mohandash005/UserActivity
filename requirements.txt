@@ -13,7 +13,7 @@ django-filter==0.13.0
 django-markdown==0.8.4
 django-pagedown==0.1.1
 django-simple-history==1.9.1
-djangorestframework==3.3.3
+djangorestframework==3.9.1
 httplib2==0.17.0
 idna==2.9
 Jinja2==2.11.1
