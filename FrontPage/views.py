@@ -10,6 +10,7 @@ import datetime
 
 Dat = datetime.datetime.now()
 fullname = ""
+
 def Login(request):
     if request.method == 'POST':
         mail = request.POST.get('email')
@@ -18,20 +19,23 @@ def Login(request):
             messages.info(request,'Please fillup all fields')
             return redirect('/Login')
         else:
-            data = User.objects.all().filter(Mail=mail)
-            check=serializers.serialize('json', data)                #query to json data conversation
-            dta=check
-            dt= json.loads(dta)                                      #converts string to list
-            name= dt[0]['fields']['FullName']
-            check = django_pbkdf2_sha256.verify(passwd, dt[0]['fields']['Password'])
-            if User.objects.filter(Mail=mail) and check == True:
-                globals()['Dat'] = datetime.datetime.now()
-                globals()['fullname'] = name
-                return render(request,'Home.html',{'name':name})
+            data = UserDetail.objects.all().filter(Mail=mail)
+            if data:
+                check=serializers.serialize('json', data)                #query to json data conversation
+                dta=check
+                dt= json.loads(dta)                                      #converts string to list
+                name= dt[0]['fields']['FullName']
+                check = django_pbkdf2_sha256.verify(passwd, dt[0]['fields']['Password'])
+                if UserDetail.objects.filter(Mail=mail) and check == True:
+                    return render(request,'MainPage/Home.html',{'name':name})
+                else:
+                    messages.info(request,'Please Incorrect Data')
+                    return redirect('/Login')
             else:
-                messages.info(request,'Please Incorrect Data')
+                messages.info(request,'Incorrect')
                 return redirect('/Login')
     return render(request,'Login_Page.html',{})
+
 
 def Signup(request):
     if request.method == 'POST':
